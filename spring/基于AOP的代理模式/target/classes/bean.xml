@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="com"></context:component-scan>
+
+    <!--开启spring注解AOP支持-->
+<!--    <aop:aspectj-autoproxy></aop:aspectj-autoproxy>-->
+<!--    &lt;!&ndash;配置spring的ioc&ndash;&gt;-->
+<!--    <bean id="accountService" class="com.chenhu.service.AccountService"></bean>-->
+
+
+<!--    &lt;!&ndash;配置spring的aop&ndash;&gt;-->
+<!--    <bean id="logger" class="com.chenhu.units.Logger"></bean>-->
+<!--    <aop:config>-->
+<!--        <aop:aspect id="loggerAdvice" ref="logger">-->
+<!--            <aop:before method="printLogBe" pointcut-ref="pit"></aop:before>-->
+<!--            <aop:after-returning method="printLogAf" pointcut-ref="pit"></aop:after-returning>-->
+<!--            <aop:after-throwing method="printLogYAf" pointcut-ref="pit"></aop:after-throwing>-->
+<!--            <aop:after method="printLogZAf" pointcut-ref="pit"></aop:after>-->
+
+<!--            <aop:pointcut id="pit" expression="execution(* com.chenhu.service.*.*(..))"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+</beans>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text1</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/mescroll.min.css">
+    <script src="js/mescroll.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+            background: #F2F2F2;
+        }
+        .mescroll{
+            position: fixed;
+            top: 44px;
+            bottom: 0;
+            height: auto; /*如设置bottom:50px,则需height:auto才能生效*/
+        }
+        header{
+            height: 44px;
+            width: 100%;
+            background: #2ecc71;
+            text-align: center;
+            line-height: 44px;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+
+        }
+        .dataList > li{
+            display: flex;
+            background: white;
+            justify-content: flex-start;
+            margin-top: 8px;
+        }
+        .dataList > li > ul{
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+<header>页头</header>
+<div id="mescroll" class="mescroll">  <!--id可以改,而"mescroll"的class不能删-->
+
+    <ul class="dataList" id="dataList"> <!--//这个div不能删,否则上拉加载的布局会错位.(可以改成ul或者其他容器标签)-->
+        <!--//内容...-->
+    </ul>
+
+</div>
+<script>
+    $(function () {
+        var index = 0;
+        var mescroll =new MeScroll("mescroll",{
+            up: {
+                callback: upCallback, //上拉加载的回调
+                //以下是一些常用的配置,当然不写也可以的.
+                page: {
+                    num: 0, //当前页 默认0,回调之前会加1; 即callback(page)会从1开始
+                    size: 10//每页数据条数,默认10
+                },
+                htmlNodata: '<p class="upwarp-nodata">-- END --</p>',
+                noMoreSize: 5, //如果列表已无数据,可设置列表的总数量要大于5才显示无更多数据;避免列表数据过少(比如只有一条数据),
+                // 显示无更多数据会不好看这就是为什么无更多数据有时候不显示的原因.
+
+            }
+        });
+        //上拉加载的回调 page = {num:1, size:10}; num:当前页 默认从1开始, size:每页数据条数,默认10
+        function upCallback(page) {
+            var pageNum = page.num; // 页码, 默认从1开始 如何修改从0开始 ?
+            var pageSize = page.size; // 页长, 默认每页10条
+            setTimeout(function () {
+                $.ajax({
+                    url:"data/person.json",
+                    success: function(data) {
+                        var curPageData = data.persons.slice(index,index+pageSize); // 接口返回的当前页数据列表
+                        var totalSize = data.persons.length ; // 接口返回的总数据量(比如列表有26个数据,每页10条,共3页; 则totalSize值为26)
+
+                        //联网成功的回调,隐藏下拉刷新和上拉加载的状态;
+                        //mescroll会根据传的参数,自动判断列表如果无任何数据,则提示空,显示empty配置的内容;
+                        //列表如果无下一页数据,则提示无更多数据,(注意noMoreSize的配置)
+
+                        //方法一(推荐): 后台接口有返回列表的总页数 totalPage
+                        //必传参数(当前页的数据个数, 总页数)
+                        //mescroll.endByPage(curPageData.length, totalPage);
+
+                        //方法二(推荐): 后台接口有返回列表的总数据量 totalSize
+                        //必传参数(当前页的数据个数, 总数据量)
+                        mescroll.endBySize(curPageData.length, totalSize);
+
+                        //方法三(推荐): 您有其他方式知道是否有下一页 hasNext
+                        //必传参数(当前页的数据个数, 是否有下一页true/false)
+                        //mescroll.endSuccess(curPageData.length, hasNext);
+
+                        //方法四 (不推荐),会存在一个小问题:比如列表共有20条数据,每页加载10条,共2页.
+                        //如果只根据当前页的数据个数判断,则需翻到第三页才会知道无更多数据
+                        //如果传了hasNext,则翻到第二页即可显示无更多数据.
+                        //mescroll.endSuccess(curPageData.length);
+
+                        //结束下拉刷新的 mescroll.endSuccess()无参.
+                        //结束上拉加载 curPageData.length必传的原因:
+                        // 1.使配置的noMoreSize 和 empty生效
+                        // 2.判断是否有下一页的首要依据: 当传的值小于page.size时,则一定会认为无更多数据.
+                        //    比传入的totalPage, totalSize, hasNext具有更高的判断优先级
+                        // 3.当传的值等于page.size时,才会取totalPage, totalSize, hasNext判断是否有下一页
+                        //传totalPage, totalSize, hasNext主要目的是避免方法四描述的小问题
+
+                        //设置列表数据
+                        setListData(curPageData);//自行实现 TODO
+                        index += pageSize;
+                    },
+                    error: function(e) {
+                        //联网失败的回调,隐藏下拉刷新和上拉加载的状态
+                        mescroll.endErr();
+                    }
+                });
+            },2000)
+
+        }
+
+        /*设置列表数据*/
+        function setListData(curPageData) {
+            var dataListDom=document.getElementById("dataList");
+            for (var i = 0; i < curPageData.length; i++) {
+                var newObj=curPageData[i];
+                var firstLi = document.createElement("li");
+                var secondUl = document.createElement("ul");
+                var secondLi1 = document.createElement("li");
+                var secondLi2 = document.createElement("li");
+                var firstSpan1 = document.createElement("span");
+                var firstSpan2 = document.createElement("span");
+                firstSpan1.innerHTML = "Name:" + newObj.name;
+                firstSpan2.innerHTML = "Age:" + newObj.age;
+                secondLi1.appendChild(firstSpan1);
+                secondLi2.appendChild(firstSpan2);
+                secondUl.appendChild(secondLi1);
+                secondUl.appendChild(secondLi2);
+                firstLi.appendChild(secondUl);
+                dataListDom.appendChild(firstLi);
+            }
+        }
+
+
+    })
+
+</script>
+</body>
+</html>

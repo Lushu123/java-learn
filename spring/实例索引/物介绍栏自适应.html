@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>物介绍栏自适应</title>
+    <meta name="viewport" content="width=device-width,initial-scale-1">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .team-section{
+            background: #f1f1f1;
+            text-align: center;
+        }
+        .inner-width{
+            max-width: 1200px;
+            margin: auto;
+            padding: 40px;
+            overflow: hidden;
+        }
+        .inner-width h1{
+            border-bottom: 4px solid;
+            font-size: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .pe{
+            float: left;
+            width: calc(100%/3);
+            padding: 40px 0;
+            overflow: hidden;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .pe:hover{
+            background: #ddd;
+        }
+        .pe img{
+            width: 120px;
+            height: 120px;
+        }
+        .p-name{
+            margin: 16px 0;
+        }
+        .p-des{
+            color: #3498db;
+        }
+        .p-sm{
+            margin-top: 12px;
+        }
+        .p-sm a{
+            margin: 0 4px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        .p-sm a:hover{
+            background: #adadad;
+        }
+        .p-sm a:hover>i{
+            color: white;
+        }
+        .p-sm a i{
+            line-height: 30px;
+            color: #333333;
+        }
+        @media screen and (max-width: 600px) {
+            .pe{
+                width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="team-section">
+        <div class="inner-width">
+            <h1>Meet Our Team</h1>
+            <div class="pers">
+                <div class="pe">
+                    <img src="images/big_7.jpg">
+                    <div class="p-name">Fll Name</div>
+                    <div class="p-des">Designer</div>
+                    <div class="p-sm">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="pe">
+                    <img src="images/big_8.jpg">
+                    <div class="p-name">Fll Name</div>
+                    <div class="p-des">Designer</div>
+                    <div class="p-sm">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="pe">
+                    <img src="images/big_9.jpg">
+                    <div class="p-name">Fll Name</div>
+                    <div class="p-des">Designer</div>
+                    <div class="p-sm">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>简易选项卡</title>
+    <style>
+        body,ul,li{margin:0;padding:0;}
+
+        .container{
+            width: 450px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+        #tab{
+            width: 100%;
+            overflow: hidden;
+            zoom: 1;
+            background: #000;
+            border: 1px solid #000;
+            color: #ffffff;
+            list-style: none;
+        }
+        #tab>li{
+            float:left;color:#fff;
+            height:30px;
+            cursor:pointer;
+            line-height:30px;
+            list-style-type:none;
+            padding:0 20px;
+        }
+        #content{
+            border: 1px solid #000;
+        }
+        #tab li.current{color:#000;background:#ccc;}
+
+    </style>
+    <script>
+        window.onload = function () {
+            var oLi = document.getElementById("tab").getElementsByTagName("li");
+            var oUl = document.getElementById("content").getElementsByTagName("ul");
+
+            for (var i = 0; i < oLi.length; i++) {
+                oLi[i].index = i;
+                oLi[i].onmouseover = function () {
+                    for (var n = 0; n < oLi.length; n++) oLi[n].className = "";
+                    this.className = "current";
+                    for (var n = 0; n < oUl.length; n++) oUl[n].style.display = "none";
+                    oUl[this.index].style.display = "block"
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <ul id="tab">
+            <li class="current">第一课</li>
+            <li>第二课</li>
+            <li>第三课</li>
+        </ul>
+        <div id="content">
+            <ul>
+                <li>1111</li>
+            </ul>
+            <ul style="display: none">
+                <li>222</li>
+            </ul>
+            <ul style="display: none">
+                <li>333</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

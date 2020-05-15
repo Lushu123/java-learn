@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>手风琴菜单</title>
+    <style>
+        a{
+            text-decoration: none;
+        }
+        .middle{
+            position: absolute;
+            top: 50%;
+            left:50% ;
+            transform: translate(-50%,-50%);
+        }
+        .menu{
+            width: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .item{
+            border-top: 1px solid #2980b9;
+            overflow: hidden;
+            list-style: none;
+        }
+        .btn{
+            display: block;
+            padding: 16px 20px;
+            background: #3498db;
+            color: white;
+            position: relative;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            background:#3498db ;
+            transform: rotate(45deg);
+            bottom: -7px;
+        }
+        .smenu{
+            background:#333 ;
+            overflow: hidden;
+            transition: max-height 0.6s;
+            max-height: 0;
+        }
+        .smenu a{
+            display: block;
+            padding: 16px 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            margin:4px 0;
+            position: relative;
+        }
+        .smenu a::before{
+            content: "";
+            position: absolute;
+            width: 6px;
+            height: 100%;
+            background:#3498db ;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: 0.6s;
+        }
+        .smenu a:hover::before{
+            opacity: 1;
+        }
+        .item:target .smenu{
+            max-height: 10em;
+        }
+    </style>
+</head>
+<body>
+    <div class="middle">
+        <div class="menu">
+            <li class="item" id="profile">
+                <a href="#profile" class="btn">Profile</a>
+                <div class="smenu">
+                    <a href="#">Posts</a>
+                    <a href="#">Posts</a>
+                </div>
+            </li>
+            <li class="item" id="messages">
+                <a href="#messages" class="btn">Messages</a>
+                <div class="smenu">
+                    <a href="#">New</a>
+                    <a href="#">Sent</a>
+                    <a href="#">Span</a>
+                </div>
+            </li>
+            <li class="item" id="settings">
+                <a href="#settings" class="btn">Settings</a>
+                <div class="smenu">
+                    <a href="#">New</a>
+                    <a href="#">Sent</a>
+                </div>
+            </li>
+            <li class="item" id="login">
+                <a href="#login" class="btn">Login</a>
+            </li>
+        </div>
+    </div>
+</body>
+</html>

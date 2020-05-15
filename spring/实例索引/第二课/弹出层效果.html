@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹出层效果</title>
+    <style>
+        #shelter{
+            background: #808080;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0.5;
+            display: none;
+        }
+        #show{
+            position:absolute;
+            top:50%;
+            left:50%;
+            width:400px;
+            height:200px;
+            background:#fff;
+            border:4px solid #f90;
+            margin:-102px 0 0 -202px;
+            display:none;
+        }
+        .cen{
+            margin: 0px auto;
+        }
+        h2{font-size:12px;text-align:right;background:#FC0;border-bottom:3px solid #f90;padding:5px;}
+        h2 span{color:#f90;cursor:pointer;background:#fff;border:1px solid #f90;padding:0 2px;}
+    </style>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementsByTagName("button")[0];
+            var shelter = document.getElementById("shelter");
+            var show = document.getElementById("show");
+            var close = document.getElementById("close");
+
+            oBtn.onclick = function () {
+                shelter.style.display = "block";
+                show.style.display = "block";
+            };
+            close.onclick = function () {
+                shelter.style.display = "none";
+                show.style.display = "none";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div id="shelter"></div>
+    <div id="show">
+        <h2><span id="close">×</span></h2>
+    </div>
+    <div class="cen">
+        <button type="button">弹出</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数传参，改变Div任意属性的值</title>
+    <style>
+        .container{
+            width: 300px;
+            margin: 0px auto;
+        }
+        #box{
+            margin: 0px auto;
+            width: 200px;
+            height: 200px;
+            background: black;
+            color: #ffffff;
+        }
+    </style>
+    <script>
+        var changeStyle = function (elem, name, value) {
+            elem.style[name] = value
+        };
+        window.onload = function () {
+            var attrName = document.getElementById("attrName");
+            var attrValue = document.getElementById("attrValue");
+            var detemine = document.getElementById("detemine");
+            var reset = document.getElementById("reset");
+            var box = document.getElementById("box");
+            detemine.onclick = function () {
+                changeStyle(box,attrName.value,attrValue.value);
+            };
+            reset.onclick = function () {
+                box.removeAttribute("style");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <p><span>属性名：</span><input type="text" id="attrName" value="background"></p>
+        <p><span>属性值：</span><input type="text" id="attrValue" value="red"></p>
+        <p>
+            <button type="button" id="detemine">确定</button>
+            <button type="button" id="reset">重置</button>
+        </p>
+
+    </div>
+    <div id="box">在上方输入框输入"属性名"及"属性值"，点击确定按钮查看效果。</div>
+</body>
+</html>

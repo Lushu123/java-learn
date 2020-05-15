@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>循环动画</title>
+    <style>
+        .container{
+            width: 340px;
+            margin: 0px auto;
+            overflow: hidden;
+            padding-right: 10px;
+            padding-bottom: 10px;
+        }
+        .container>div:not([class="controll"]){
+            width: 100px;
+            height: 100px;
+            background: skyblue;
+            float: left;
+            margin-top: 10px;
+            margin-left:10px ;
+        }
+        .controll{
+            background: #ffffff;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-top: 10px;
+            margin-left:10px ;
+        }
+        .op{
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="op">
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div class="controll">
+            <button type="button" id="start">开始</button>
+            <button type="button" id="stop">停止</button>
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+        <div>
+
+        </div>
+
+
+
+    </div>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        var timer;
+       function getRamdom(min,max) {
+           return parseInt(Math.random()*(max-min+1));
+       }
+       function change() {
+           var $divList = $(".container>div:not([class='controll'])");
+           var divIndex = $divList.length;
+           var $thisIdx = $($divList[getRamdom(0,divIndex-1)]);
+           $divList.removeClass("op");
+           $thisIdx.addClass("op");
+           console.log(divIndex);
+           console.log($divList);
+           console.log($thisIdx);
+       }
+       function start() {
+           clearInterval(timer);
+           timer = setInterval(change,200);
+       }
+       $("#start").on("click",start);
+        $("#stop").on("click",function () {
+            clearInterval(timer)
+        })
+    })
+</script>
+</body>
+</html>

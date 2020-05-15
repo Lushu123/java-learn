@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/mescroll.min.css">
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script src="js/mescroll.min.js"></script>
+    <script src="js/swiper-3.3.1.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <style>
+        body,html{
+            padding: 0;
+            margin: 0;
+        }
+        header{
+            width: 100%;
+        }
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 50px;
+            border-bottom: 2px #EDEDED solid;
+
+        }
+        nav a{
+            flex: 1 0 20%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        nav a.active{
+            color: red;
+            border-bottom: 2px red solid;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var navList = document.querySelectorAll("nav > a");
+            var hideContentList = document.querySelectorAll(".tab-content > div:not(.show)");
+            hideContentList.forEach(function (dom) {
+                dom.classList.add("hide")
+            });
+            navList.forEach(function (courDom) {
+                courDom.onclick = function () {
+                    var noAcvive = document.querySelector("nav > a.active");
+                    var hideContent = document.querySelector(".tab-content > div.show");
+                    var showNavContentList = document.querySelector(".tab-content > div."+this.getAttribute("data-target")+"");
+                    noAcvive.classList.remove("active");
+                    this.classList.add("active");
+                    hideContent.classList.remove("show");
+                    hideContent.classList.add("hide");
+                    showNavContentList.classList.remove("hide");
+                    showNavContentList.classList.add("show")
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="active" data-target="content1">导航1</a>
+            <a data-target="content2">导航2</a>
+            <a data-target="content3">导航3</a>
+            <a data-target="content4">导航4</a>
+        </nav>
+    </header>
+    <div class="tab-content">
+        <div class="content1 show">
+            <p>111111111111</p>
+        </div>
+        <div class="content2">
+            <p>222222222</p>
+        </div>
+        <div class="content3">
+            <p>333333333</p>
+        </div>
+        <div class="content4">
+            <p>44444444444</p>
+        </div>
+    </div>
+</body>
+</html>

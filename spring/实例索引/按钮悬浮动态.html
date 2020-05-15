@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>按钮悬浮动态</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            text-align: center;
+            margin-top: 280px;
+        }
+        .btn{
+            border: 1px #3498db solid;
+            background: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: 0.8s;
+            position: relative;
+            overflow: hidden;
+            color: #3498db;
+        }
+        .btn:hover{
+            color: #f1f1f1;
+        }
+        .btn::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: #3498db;
+            border-radius: 0 0 50% 50%;
+            z-index: -1;
+            transition: 0.8s;
+            top: 0px;
+        }
+        .btn:hover::before{
+            height: 180%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button type="button" class="btn btn1">Hove me</button>
+        <button type="button" class="btn btn2">Hove me</button>
+        <button type="button" class="btn">Hove me</button>
+        <button type="button" class="btn">Hove me</button>
+    </div>
+</body>
+</html>

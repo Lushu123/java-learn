@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--    <bean id="beanFactroy" class="com.chenhu.factory.BeanFactroy">-->
+<!--        -->
+<!--    </bean>-->
+
+<!--     1、基于xml配置-->
+<!--     &lt;!&ndash;配置AccountService&ndash;&gt;-->
+<!--     <bean id="accountService" class="com.chenhu.service.AccountService">-->
+<!--          &lt;!&ndash;注入持久层的AccountDao&ndash;&gt;-->
+<!--          <property name="accountDao" ref="accountDao"></property>-->
+<!--     </bean>-->
+<!--     &lt;!&ndash;配置Dao对象&ndash;&gt;-->
+<!--     <bean id="accountDao" class="com.chenhu.dao.AccountDao">-->
+<!--          &lt;!&ndash;注入数据库操作类&ndash;&gt;-->
+<!--          <property name="queryRunner" ref="queryRunner"></property>-->
+<!--     </bean>-->
+
+<!--     2、基于注解-->
+
+
+<!--     &lt;!&ndash;jar的对象怎么用注解呢？ &ndash;&gt;-->
+<!--     &lt;!&ndash;配置queryRunner对象&ndash;&gt;-->
+<!--     <bean id="queryRunner" class="org.apache.commons.dbutils.QueryRunner" scope="prototype">-->
+<!--          &lt;!&ndash;注入数据源&ndash;&gt;-->
+<!--          <constructor-arg name="ds" ref="dataSource"></constructor-arg>-->
+<!--     </bean>-->
+
+<!--     &lt;!&ndash;配置数据源&ndash;&gt;-->
+<!--     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">-->
+<!--          &lt;!&ndash;连接数据库的必备信息&ndash;&gt;-->
+<!--          <property name="driverClass" value="com.mysql.jdbc.Driver"></property>-->
+<!--          <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/first"></property>-->
+<!--          <property name="user" value="root"></property>-->
+<!--          <property name="password" value="123456"></property>-->
+<!--     </bean>-->
+</beans>

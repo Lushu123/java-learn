@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b10084f3-75fa-4712-9309-27d1babe47ca" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="778" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectId" id="1YbvK1vqDP8Mrra5tsJkZjOKee0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\学习\Mybatis2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MybatisTest.textFillAll">
+    <configuration name="MybatisTest.textFillAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textFillAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.textUpdateUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textUpdateUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MybatisTest.textFillAll" />
+        <item itemvalue="JUnit.MybatisTest.textUpdateUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b10084f3-75fa-4712-9309-27d1babe47ca" name="Default Changelist" comment="" />
+      <created>1567413220848</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567413220848</updated>
+      <workItem from="1567413224495" duration="2128000" />
+      <workItem from="1567469411922" duration="2656000" />
+      <workItem from="1567604935622" duration="36000" />
+      <workItem from="1568210154988" duration="17000" />
+      <workItem from="1568212555715" duration="356000" />
+      <workItem from="1568443516337" duration="160000" />
+      <workItem from="1571819277530" duration="631000" />
+      <workItem from="1583224042245" duration="56000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 14m 02s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textUpdateUser - 2019.09.03 at 08h 15m 02s.xml">
+      <configuration name="MybatisTest.textUpdateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textUpdateUser - 2019.09.03 at 08h 16m 09s.xml">
+      <configuration name="MybatisTest.textUpdateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 49m 05s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 49m 44s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 50m 17s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 53m 32s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 54m 28s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 57m 02s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFillAll - 2019.09.03 at 08h 58m 11s.xml">
+      <configuration name="MybatisTest.textFillAll" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

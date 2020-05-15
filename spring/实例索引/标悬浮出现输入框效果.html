@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标悬浮出现输入框效果</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #2e6da4;
+        }
+        .container{
+            padding: 100px 40px;
+            text-align: center;
+            color: white;
+        }
+        .container p{
+            max-width: 600px;
+            margin: 40px auto;
+            font-size: 15px;
+            font-weight: 300;
+        }
+        .email_box{
+            height: 40px;
+            display: flex;
+            justify-content: center;
+        }
+        .email_box i{
+            background: #2f3542;
+            width: 40px;
+            line-height: 40px;
+        }
+        .tbox,.btn{
+            border: none;
+            outline: none;
+        }
+        .tbox{
+            width: 0;
+            transition: 1s;
+        }
+        .email_box:hover > .tbox,.tbox:focus{
+            width: 200px;
+            padding: 0 10px;
+        }
+        .btn{
+            background: #2f3542 ;
+            color: white;
+            padding: 0 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>W3school</h1>
+        <p>在 W3School，你可以找到你所需要的所有的网站建设教程。 从基础的 HTML 到 CSS，乃至进阶的 XML、SQL、JS、PHP 和 ASP.NET。</p>
+        <form class="email_box">
+            <i class="fa fa-envelope-square"></i>
+            <input class="tbox" type="email" value="" id="" >
+            <button class="btn" type="button">提交</button>
+        </form>
+    </div>
+</body>
+</html>

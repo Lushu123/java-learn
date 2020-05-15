@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 鼠标移过，修改图片路径</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body{
+            background: black;
+        }
+        .container{
+            width:240px;
+            margin: 0px auto;
+            background: #ffffff;
+            border-radius: 5px;
+        }
+        ul{
+            overflow: hidden;
+            padding: 10px 12px;
+        }
+        ul li{
+            margin: 0px auto;
+            list-style: none;
+            display: block;
+            float: left;
+            width: 50px;
+            height: 50px;
+            padding: 2px;
+        }
+        img{
+            border-radius: 3px;
+        }
+        .first{
+            width:156px ;
+            height: 156px;
+            padding-right: 2px;
+        }
+        li:not([class="first"]):hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="first"><img src="images/big_1.jpg"class="first"></li>
+            <li><img src="images/small_1.jpg"></li>
+            <li><img src="images/small_2.jpg"></li>
+            <li><img src="images/small_3.jpg"></li>
+            <li><img src="images/small_4.jpg"></li>
+            <li><img src="images/small_5.jpg"></li>
+            <li><img src="images/small_6.jpg"></li>
+            <li><img src="images/small_7.jpg"></li>
+            <li><img src="images/small_8.jpg"></li>
+            <li><img src="images/small_9.jpg"></li>
+            <li><img src="images/small_10.jpg"></li>
+            <li><img src="images/small_11.jpg"></li>
+        </ul>
+    </div>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+    $("li:not('.first')").hover(function () {
+        var index = $(this).index();
+        $("img.first").attr("src","images/big_"+index+".jpg")
+        console.log(index);
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片放大机制</title>
+    <style>
+        html,body{
+            overflow: hidden;
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .middle{
+            position: absolute;
+            top:50% ;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 2px solid #2ecc71;
+        }
+        .image{
+            width: 200px;
+            height: 200px;
+            margin: 5px;
+        }
+        .wrap{
+            width: 100%;
+            height: 100%;
+            background: #333333;
+            position: relative;
+            transform-origin: center;
+        }
+        .big-img{
+            position: absolute;
+            top:50% ;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 99;
+        }
+        .big-img >img{
+            width: 500px;
+            height: 500px;
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="middle">
+        <div class="img-list">
+            <img src="images/1.jpg" alt="" class="image">
+            <img src="images/big_7.jpg" alt="" class="image">
+            <img src="images/big_8.jpg" alt="" class="image">
+            <img src="images/big_9.jpg" alt="" class="image">
+        </div>
+    </div>
+
+    <div class="wrap" style="display: none;">
+        <div class="big-img">
+            <img src="" alt="" class="image">
+        </div>
+    </div>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    $(function () {
+        var $imgs = $('.img-list>img');
+        $imgs.each(function () {
+            $(this).on('click',function () {
+                var src = this.src;
+                $('.wrap').show(600);
+                $('.big-img>img').attr('src',src)
+            })
+        });
+        $('.wrap').click(function () {
+            $(this).hide(600);
+        })
+
+    })
+</script>
+</body>
+</html>

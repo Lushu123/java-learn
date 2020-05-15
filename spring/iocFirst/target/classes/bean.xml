@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--利用构造函数注入-->
+    <bean id="accountServer" class="com.server.AccountServer">
+        <constructor-arg name="text" value="abc"></constructor-arg>
+        <constructor-arg name="num" value="123"></constructor-arg>
+        <constructor-arg name="date" ref="now"></constructor-arg>
+    </bean>
+    <!--set方法注入-->
+    <bean id="ac2" class="com.server.AccountServer2">
+        <property name="date" ref="now"></property>
+        <property name="num" value="78"></property>
+        <property name="text" value="fff"></property>
+    </bean>
+    <bean id="now" class="java.util.Date"></bean>
+</beans>

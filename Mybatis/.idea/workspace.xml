@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dff5f50f-b7af-4395-a402-e27fee271a8f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Sjy6WGCVKPwiG7VHkdVGKUnqZj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\学习\Mybatis\src\main\resources\com\chenhu\dao" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.MybatisTest.textSaveUser">
+    <configuration name="MybatisTest.textDeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textDeleteUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.textFindTotal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textFindTotal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.textFindUserById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textFindUserById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.textFindUserByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textFindUserByName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MybatisTest.textSaveUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Mybatis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.chenhu.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.chenhu.test" />
+      <option name="MAIN_CLASS_NAME" value="com.chenhu.test.MybatisTest" />
+      <option name="METHOD_NAME" value="textSaveUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MybatisTest.textSaveUser" />
+        <item itemvalue="JUnit.MybatisTest.textFindTotal" />
+        <item itemvalue="JUnit.MybatisTest.textFindUserByName" />
+        <item itemvalue="JUnit.MybatisTest.textFindUserById" />
+        <item itemvalue="JUnit.MybatisTest.textDeleteUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dff5f50f-b7af-4395-a402-e27fee271a8f" name="Default Changelist" comment="" />
+      <created>1567217882074</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567217882074</updated>
+      <workItem from="1567217886657" duration="8112000" />
+      <workItem from="1567407211005" duration="5218000" />
+      <workItem from="1567416359014" duration="1228000" />
+      <workItem from="1568210043259" duration="109000" />
+      <workItem from="1568524245619" duration="52000" />
+      <workItem from="1571819154157" duration="111000" />
+      <workItem from="1572091148587" duration="63000" />
+      <workItem from="1583221753861" duration="982000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MybatisTest_textUpdateUser - 2019.09.02 at 15h 21m 47s.xml">
+      <configuration name="MybatisTest.textUpdateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textUpdateUser - 2019.09.02 at 15h 22m 59s.xml">
+      <configuration name="MybatisTest.textUpdateUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textDeleteUser - 2019.09.02 at 15h 26m 35s.xml">
+      <configuration name="MybatisTest.textDeleteUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFindUserById - 2019.09.02 at 15h 31m 19s.xml">
+      <configuration name="MybatisTest.textFindUserById" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFindUserByName - 2019.09.02 at 15h 37m 00s.xml">
+      <configuration name="MybatisTest.textFindUserByName" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textFindTotal - 2019.09.02 at 15h 41m 10s.xml">
+      <configuration name="MybatisTest.textFindTotal" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textSaveUser - 2019.09.02 at 15h 50m 45s.xml">
+      <configuration name="MybatisTest.textSaveUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textSaveUser - 2019.09.02 at 15h 51m 39s.xml">
+      <configuration name="MybatisTest.textSaveUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textSaveUser - 2019.09.02 at 15h 53m 07s.xml">
+      <configuration name="MybatisTest.textSaveUser" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MybatisTest_textSaveUser - 2019.09.02 at 15h 55m 16s.xml">
+      <configuration name="MybatisTest.textSaveUser" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+</head>
+<body>
+
+    <h4>保存数据到数据库</h4>
+    <form action="/user/insertUser" method="post">
+        姓名：<input type="text" name="name"><br>
+        年龄：<input type="text" name="age"><br>
+        <input type="submit" value="保存">
+    </form>
+    <hr>
+    <h4>格式化参数</h4>
+    <form method="get" action="/user/format">
+        日期：<input type="text" name="date"><br>
+        金额：<input type="text" name="number"><br>
+        <input type="submit" value="测试">
+    </form>
+    <hr>
+    <h4>文件上传</h4>
+    <form method="post" action="/user/uploadPart" enctype="multipart/form-data">
+        <input type="file" name="file" value="请选择文件">
+        <input type="submit" value="提交">
+    </form>
+
+
+
+<script src="webjars/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        //向后台请求数据
+        $.ajax({
+            url:"/user/getUser",
+            type:"get",
+            dataType:"json",
+            data:{id:1},
+            success:function (data) {
+                console.log(data);
+            },
+            error:function (data) {
+                alert("获取数据失败！")
+            }
+        });
+        //向后台请求数据（传入字段需要验证）
+        var pojo = {
+            id:12,
+            data:"2020-08-08"
+        };
+        $.post({
+            url:"/valid/validate",
+            contentType:"application/json",
+            data:JSON.stringify(pojo),
+            success:function (data) {
+                console.log(data);
+            }
+        });
+    })
+</script>
+</body>
+</html>

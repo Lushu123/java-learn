@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+        .box1{
+            background: #2ecc71;
+            position: absolute;
+        }
+        .box2{
+            background: #3498db;
+            position: relative;
+            top: 80px;
+        }
+        .box3{
+            background: yellow;
+            position: relative;
+            /*
+                一、同级
+                1、所有的定位如果不设置偏移量都不会改变它原来的位置
+                2、两个元素都设置了position为绝对定位，则在文档中下
+                   面的将覆盖上面的元素，并且元素脱离文档流，原来的
+                   位置它不再占有，下面的元素会顶上来，但会被它覆盖
+                3、position为relative元素不会脱离文档流
+
+                二、父子关系
+
+            */
+        }
+
+        .box4{
+            width: 400px;
+            height: 400px;
+            border: 1px solid;
+            padding: 10px;
+            position: absolute;
+        }
+        .box5{
+            background: #2ecc71;
+            margin-bottom: 10px;
+        }
+        .box6{
+            background: #3498db;
+            position: relative;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+
+    </div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <p>aaaaaaaaaaaaaaaaaaaaaaa</p>
+    <div class="box4">
+        <div class="box5">
+            <span>aaaa</span>
+        </div>
+        <div class="box6">
+            <span>aaaa</span>
+        </div>
+    </div>
+</body>
+</html>

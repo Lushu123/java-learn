@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏菜单</title>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #333333;
+        }
+        .contact-info{
+            position: fixed;
+            top: 50%;
+            z-index: 99;
+            left: 0;
+            transform: translateY(-50%);
+        }
+        .option{
+            cursor: pointer;
+            position: relative;
+            margin: 8px 0;
+        }
+        .option i{
+            display: block;
+            width: 60px;
+            height: 60px;
+            text-align: center;
+            color: #b9b9b9;
+            background:#f1f1f1 ;
+            line-height: 60px;
+            transition: 0.6s;
+            font-size: 18px;
+        }
+        .option:hover>i{
+            color: #3498db;
+        }
+        .text{
+            background: black;
+            top: 0;
+            left: -140px;
+            position: absolute;
+            color: white;
+            text-align: center;
+            width: 200px;
+            height: 60px;
+            transition: 0.8s;
+            line-height: 60px;
+            z-index: -1;
+        }
+        .option:hover>.text{
+            left: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-info">
+        <div class="option">
+            <i class="fa fa-map-marker"></i>
+            <div class="text">111</div>
+        </div>
+        <div class="option">
+            <i class="fa fa-envelope"></i>
+            <div class="text">222</div>
+        </div>
+        <div class="option">
+            <i class="fa fa-mobile-phone"></i>
+            <div class="text">333</div>
+        </div>
+    </div>
+</body>
+</html>
